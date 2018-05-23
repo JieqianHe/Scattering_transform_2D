@@ -55,3 +55,29 @@ def gabor_wave_freq_family_2d(n,K,S,Q,sigma, zeta, eta,a):
             for l in range(Q):
                 psi_hat[:,:,i,j*Q+l] = gabor_wave_freq_2d(n,sigma,zeta,eta,a,j+l/Q,i*math.pi/K)
     return psi_hat
+
+# pi = math.pi
+# n = 128
+# K = 6
+# S = 4
+# Q = 2
+# sigma = 1.1
+# zeta = 1.2
+# eta = 0.8 * pi
+# a = 2
+# j = 2
+# theta = math.pi/6
+# psi = gabor_wave_family_2d(n,K,Q,S,sigma,zeta,eta,a)
+# psi_hat = gabor_wave_freq_family_2d(n,K,S,Q,sigma, zeta, eta,a)
+
+# count = 0
+# for i in range(K):
+#     for k in range(S*Q):
+#         count += 1
+#         plt.subplot(K,S*Q,count)
+#         plt.imshow(np.real(psi_hat[:,:,i,k]))
+#         plt.axis('off')
+# plt.subplots_adjust(hspace=0.1, wspace=0)
+# plt.show()
+
+# plt.imshow(np.sum(np.real(psi_hat),axis = (2,3)))
