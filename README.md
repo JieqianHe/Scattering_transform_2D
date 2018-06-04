@@ -1,1 +1,2 @@
-# Scattering_transform_2D
+# 2D signal synthesis
+
